@@ -1,23 +1,31 @@
 const sentence = "hello there from lighthouse labs";
 
-// for (let char of sentence) {
-//   setTimeout(() => {
 
-//     console.log(char);
-//   }, 1000);
+let delay = 0;
+for (let char of sentence) {
+  setTimeout(() => {
+    process.stdout.write(char);
+  }, delay += 50);
+}
+setTimeout(() => {
+    process.stdout.write('\n');
+  }, delay);
 
-// }
 
 // sentence.forEach((letter, index) => {
 //   setTimeout(() => {
 //     process.stdout.write(letter);
 //   }, 50 * index);
 // });
+// let delay = 0;
+// for (let i = 0; i < sentence.length; i++) {
+//   let letter = sentence[i];
 
-for (let i = 0; i < sentence.length; i++) {
-  let letter = sentence[i];
+//   setTimeout(() => {
+//     process.stdout.write(letter);
+//   }, delay += 50);
+// }
 
-  setTimeout(() => {
-    process.stdout.write(letter \n);
-  }, 50 * i);
-}
+// setTimeout(() => {
+//   console.log('');
+// }, delay);
